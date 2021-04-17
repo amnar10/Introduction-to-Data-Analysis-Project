@@ -15,5 +15,9 @@ print(vaccinations_country.head(), vaccinations_country.shape)
 vaccinations_country
 missing_val=vaccinations_country.isnull()
 print(missing_val)
+
 missing_val=vaccinations_country.isnull().sum()
 print(missing_val)
+
+new_data=vaccinations_country.dropna()
+print(new_data.shape)
