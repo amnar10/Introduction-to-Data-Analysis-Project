@@ -31,7 +31,15 @@ print(vaccinations_manufacturer.head(), vaccinations_manufacturer.shape)
 dropping_duplicates = vaccinations_country.drop_duplicates()
 print(dropping_duplicates.shape)
 
+dropping_duplicates = vaccinations_manufacturer.drop_duplicates()
+print(dropping_duplicates.shape)
+
 merged_data = pd.merge(vaccinations_country,vaccinations_manufacturer,on='date')
 print(vaccinations_country.shape, vaccinations_manufacturer.shape)
 print(merged_data.shape)
 print(merged_data)
+
+merged_data = merged_data.sort_values("country")
+print(merged_data.head())
+
+merged_data [ (merged_data["vaccine"] == "pfizer") & (merged_data["vaccine"] == "Sinovac") & (merged_data["vaccine"] == "Moderna") & (merged_data["vaccine"] == "AstraZeneca")]
