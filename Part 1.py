@@ -19,5 +19,12 @@ print(missing_val)
 missing_val=vaccinations_country.isnull().sum()
 print(missing_val)
 
-new_data=vaccinations_country.dropna()
-print(new_data.shape)
+missing_val=vaccinations_country.fillna(0)
+print(missing_val)
+
+vaccinations_manufacturer=pd.read_csv("country_vaccinations_by_manufacturer.csv")
+print(vaccinations_manufacturer.head(), vaccinations_manufacturer.shape)
+
+dropping_duplicates=vaccinations_country.drop_duplicates()
+print(dropping_duplicates.shape)
+
