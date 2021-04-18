@@ -45,3 +45,6 @@ print(merged_data.head())
 merged_data [ (merged_data["vaccine"] == "pfizer") & (merged_data["vaccine"] == "Sinovac") & (merged_data["vaccine"] == "Moderna") & (merged_data["vaccine"] == "AstraZeneca")]
 
 print(merged_data.head())
+
+merged_index_loc=merged_data.set_index("country")
+print(merged_index_loc)
