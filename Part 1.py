@@ -34,4 +34,4 @@ print(dropping_duplicates.shape)
 merged_data = pd.merge(vaccinations_country,vaccinations_manufacturer,on='date')
 print(vaccinations_country.shape, vaccinations_manufacturer.shape)
 print(merged_data.shape)
-print(merged_data)c
+print(merged_data)
