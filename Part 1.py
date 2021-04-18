@@ -48,3 +48,6 @@ print(merged_data.head())
 
 merged_index_loc=merged_data.set_index("country")
 print(merged_index_loc)
+
+merged_index_loc["Afghanistan":"Zimbabwe"]
+print(merged_index_loc)
