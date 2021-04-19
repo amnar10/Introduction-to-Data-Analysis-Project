@@ -44,3 +44,6 @@ print(concat_data.head())
 
 concat_data = concat_data.sort_values("country", ascending=True)
 print(concat_data.head())
+
+concat_data_loc=concat_data.set_index("country")
+print(concat_data_loc)
