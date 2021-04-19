@@ -34,20 +34,7 @@ print(dropping_duplicates.shape)
 dropping_duplicates = vaccinations_manufacturer.drop_duplicates()
 print(dropping_duplicates.shape)
 
-merged_data = pd.merge(vaccinations_country,vaccinations_manufacturer,on='date')
-print(vaccinations_country.shape, vaccinations_manufacturer.shape)
-print(merged_data.shape)
-print(merged_data)
+concat_data= pd.concat([vaccinations_country, vaccinations_manufacturer])
+print(vaccinations_country.shape,vaccinations_manufacturer.shape,concat_data.shape)
 
-merged_data = merged_data.sort_values("country")
-print(merged_data.head())
-
-merged_data [ (merged_data["vaccine"] == "pfizer") & (merged_data["vaccine"] == "Sinovac") & (merged_data["vaccine"] == "Moderna") & (merged_data["vaccine"] == "AstraZeneca")]
-
-print(merged_data.head())
-
-merged_index_loc=merged_data.set_index("country")
-print(merged_index_loc)
-
-merged_index_loc["Afghanistan":"Zimbabwe"]
-print(merged_index_loc)
+print(concat_data.head())
