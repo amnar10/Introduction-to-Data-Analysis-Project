@@ -15,14 +15,12 @@ import pandas as pd
 
 vaccinations_country = pd.read_csv("country_vaccinations.csv")
 print(vaccinations_country.head(), vaccinations_country.shape)
+
 vaccinations_country
 missing_val = vaccinations_country.isnull()
 print(missing_val)
 
 missing_val = vaccinations_country.isnull().sum()
-print(missing_val)
-
-missing_val = vaccinations_country.fillna(0)
 print(missing_val)
 
 vaccinations_manufacturer = pd.read_csv("country_vaccinations_by_manufacturer.csv")
@@ -47,3 +45,15 @@ print(concat_data.head())
 
 concat_data_loc=concat_data.set_index("country")
 print(concat_data_loc)
+
+missing_values_filled = concat_data_loc.fillna(0)
+print(missing_values_filled)
+
+import numpy as np
+
+
+
+
+
+
+
