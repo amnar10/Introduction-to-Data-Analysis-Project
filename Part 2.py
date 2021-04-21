@@ -12,13 +12,20 @@ print(android_games.columns)
 print(android_games.head(5))
 
 list=['rank', 'title', 'installs', 'paid', 'category']
-list1=['title','growth (30 days)','growth (60 days)',]
-list2=['title', 'total ratings', 'average rating', 'paid']
+list1=['growth (30 days)']
+list2=['growth (60 days)']
+list3=['title', 'total ratings', 'average rating', 'paid']
 
-print(android_games[list].head())
 print(android_games[list1].head())
-print(android_games[list2].head())
 
+list1np= np.array(android_games[list1])
+print(type(list1np))
+
+list2np= np.array(android_games[list2])
+print(type(list2np))
+
+np_30_60=list1np + list2np / 2
+print(np_30_60)
 
 
 
