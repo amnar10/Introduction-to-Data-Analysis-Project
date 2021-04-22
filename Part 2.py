@@ -11,21 +11,6 @@ print(android_games.shape)
 print(android_games.columns)
 print(android_games.head(5))
 
-list=['rank', 'title', 'installs', 'paid', 'category']
-list1=['growth (30 days)']
-list2=['growth (60 days)']
-list3=['title', 'total ratings', 'average rating', 'paid']
-
-print(android_games[list1].head())
-
-list_30_day_np= np.array(android_games[list1])
-print(type(list_30_day_np))
-
-list_60_day_np= np.array(android_games[list2])
-print(type(list_60_day_np))
-
-np_30_60= list_30_day_np + list_60_day_np / 2
-print(np_30_60)
 
 list_total_ratings=['total ratings']
 list_5star_ratings=['5 star ratings']
@@ -75,10 +60,8 @@ print(np.mean(percentage_5_star))
 import matplotlib.pyplot as plt
 plt.show()
 
-# Pie chart, where the slices will be ordered and plotted counter-clockwise:
 labels = '5star', '4star', '3star', '2star', '1star'
 sizes = [70, 12, 6, 3, 9]
-
 
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes,labels=labels, autopct='%1.1f%%',
@@ -87,15 +70,43 @@ ax1.axis('equal')
 
 plt.show()
 
+top_50=android_games[:51]
+print(top_50)
 
+bottom_50=android_games[:-51]
+print(bottom_50)
 
+list_top_50=['total ratings']
+list_top_50_30day=['growth (30 days)']
+list_top_50_60day=['growth (60 days)']
 
+list_top_50_np=np.array(top_50[list_top_50])
+list_top_50_30day_np=np.array(top_50[list_top_50_30day])
+list_top_50_60day_np=np.array(top_50[list_top_50_60day])
 
+Avg_top50_3060= list_top_50_30day_np + list_top_50_60day_np / 2
 
+np.mean(Avg_top50_3060)
+print(np.mean(Avg_top50_3060))
 
+np.mean(list_top_50_np)
+print(np.mean(list_top_50_np))
 
+list_bottom_50=['total ratings']
+list_bottom_50_30day=['growth (30 days)']
+list_bottom_50_60day=['growth (60 days)']
 
+list_bottom_50_np=np.array(bottom_50[list_bottom_50])
+list_bottom_50_30day_np=np.array(bottom_50[list_bottom_50_30day])
+list_bottom_50_60day_np=np.array(bottom_50[list_bottom_50_60day])
 
+Avg_bottom50_3060= list_bottom_50_30day_np + list_bottom_50_60day_np / 2
+
+np.mean(Avg_bottom50_3060)
+print(np.mean(Avg_bottom50_3060))
+
+np.mean(list_bottom_50_np)
+print(np.mean(list_bottom_50_np))
 
 
 
