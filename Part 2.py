@@ -57,6 +57,35 @@ print(percentage_2_star)
 percentage_1_star = one_star_ratings_np / total_ratings_np * 100
 print(percentage_1_star)
 
+np.mean(percentage_1_star)
+print(np.mean(percentage_1_star))
+
+np.mean(percentage_2_star)
+print(np.mean(percentage_2_star))
+
+np.mean(percentage_3_star)
+print(np.mean(percentage_3_star))
+
+np.mean(percentage_4_star)
+print(np.mean(percentage_4_star))
+
+np.mean(percentage_5_star)
+print(np.mean(percentage_5_star))
+
+import matplotlib.pyplot as plt
+plt.show()
+
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
+labels = '5star', '4star', '3star', '2star', '1star'
+sizes = [70, 12, 6, 3, 9]
+
+
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes,labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')
+
+plt.show()
 
 
 
