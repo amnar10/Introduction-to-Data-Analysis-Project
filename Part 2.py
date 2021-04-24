@@ -109,6 +109,12 @@ np.mean(list_bottom_50_np)
 print(np.mean(list_bottom_50_np))
 
 
+print(min(Avg_bottom50_3060))
+print(max(Avg_bottom50_3060))
+
+print(min(Avg_top50_3060))
+print(max(Avg_top50_3060))
+
 
 
 
