@@ -70,10 +70,10 @@ ax1.axis('equal')
 
 plt.show()
 
-top_50=android_games[:51]
+top_50=android_games[:50]
 print(top_50)
 
-bottom_50=android_games[:-51]
+bottom_50=android_games[:-50]
 print(bottom_50)
 
 list_top_50=['total ratings']
@@ -114,6 +114,11 @@ print(max(Avg_bottom50_3060))
 
 print(min(Avg_top50_3060))
 print(max(Avg_top50_3060))
+
+
+
+
+
 
 
 
