@@ -29,31 +29,23 @@ one_star_ratings_np=np.array(android_games[list_1star_ratings])
 
 percentage_5_star = five_star_ratings_np / total_ratings_np * 100
 print(percentage_5_star)
-
 percentage_4_star = four_star_ratings_np / total_ratings_np * 100
 print(percentage_4_star)
-
 percentage_3_star = three_star_ratings_np / total_ratings_np * 100
 print(percentage_3_star)
-
 percentage_2_star = two_star_ratings_np / total_ratings_np * 100
 print(percentage_2_star)
-
 percentage_1_star = one_star_ratings_np / total_ratings_np * 100
 print(percentage_1_star)
 
 np.mean(percentage_1_star)
 print(np.mean(percentage_1_star))
-
 np.mean(percentage_2_star)
 print(np.mean(percentage_2_star))
-
 np.mean(percentage_3_star)
 print(np.mean(percentage_3_star))
-
 np.mean(percentage_4_star)
 print(np.mean(percentage_4_star))
-
 np.mean(percentage_5_star)
 print(np.mean(percentage_5_star))
 
@@ -79,35 +71,29 @@ print(bottom_50)
 list_top_50=['total ratings']
 list_top_50_30day=['growth (30 days)']
 list_top_50_60day=['growth (60 days)']
-
-list_top_50_np=np.array(top_50[list_top_50])
-list_top_50_30day_np=np.array(top_50[list_top_50_30day])
-list_top_50_60day_np=np.array(top_50[list_top_50_60day])
-
-Avg_top50_3060= list_top_50_30day_np + list_top_50_60day_np / 2
-
-np.mean(Avg_top50_3060)
-print(np.mean(Avg_top50_3060))
-
-np.mean(list_top_50_np)
-print(np.mean(list_top_50_np))
-
 list_bottom_50=['total ratings']
 list_bottom_50_30day=['growth (30 days)']
 list_bottom_50_60day=['growth (60 days)']
 
+list_top_50_np=np.array(top_50[list_top_50])
+list_top_50_30day_np=np.array(top_50[list_top_50_30day])
+list_top_50_60day_np=np.array(top_50[list_top_50_60day])
 list_bottom_50_np=np.array(bottom_50[list_bottom_50])
 list_bottom_50_30day_np=np.array(bottom_50[list_bottom_50_30day])
 list_bottom_50_60day_np=np.array(bottom_50[list_bottom_50_60day])
 
+Avg_top50_3060= list_top_50_30day_np + list_top_50_60day_np / 2
 Avg_bottom50_3060= list_bottom_50_30day_np + list_bottom_50_60day_np / 2
+
+np.mean(Avg_top50_3060)
+print(np.mean(Avg_top50_3060))
+np.mean(list_top_50_np)
+print(np.mean(list_top_50_np))
 
 np.mean(Avg_bottom50_3060)
 print(np.mean(Avg_bottom50_3060))
-
 np.mean(list_bottom_50_np)
 print(np.mean(list_bottom_50_np))
-
 
 print(min(Avg_bottom50_3060))
 print(max(Avg_bottom50_3060))
