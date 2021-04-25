@@ -9,24 +9,21 @@ print(vaccinations_country.head(), vaccinations_country.shape)
 vaccinations_manufacturer = pd.read_csv("country_vaccinations_by_manufacturer.csv")
 print(vaccinations_manufacturer.head(), vaccinations_manufacturer.shape)
 
-dropping_duplicates = vaccinations_country.drop_duplicates()
-print(dropping_duplicates.shape)
-dropping_duplicates = vaccinations_manufacturer.drop_duplicates()
-print(dropping_duplicates.shape)
-
 concat_data= pd.concat([vaccinations_country, vaccinations_manufacturer])
 print(vaccinations_country.shape,vaccinations_manufacturer.shape,concat_data.shape)
 
-concat_data = concat_data.sort_values("country", ascending=True)
-print(concat_data.head())
 concat_data_loc=concat_data.set_index("country")
 print(concat_data_loc)
 
+concat_data_loc = concat_data_loc.sort_values("country", ascending=True)
+print(concat_data_loc.head())
+
 missing_val = concat_data_loc.isnull().sum()
 print(missing_val)
-
 missing_values_filled = concat_data_loc.fillna(0)
 print(missing_values_filled)
 
+dropping_duplicates = concat_data_loc.drop_duplicates()
+print(dropping_duplicates.shape)
 
 
