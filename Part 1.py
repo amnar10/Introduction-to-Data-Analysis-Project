@@ -17,6 +17,13 @@ print(dropping_duplicates.shape)
 dropping_duplicates = vaccinations_manufacturer.drop_duplicates()
 print(dropping_duplicates.shape)
 
+concat_data= pd.concat([vaccinations_country, vaccinations_manufacturer])
+print(vaccinations_country.shape,vaccinations_manufacturer.shape,concat_data.shape)
+
+concat_data = concat_data.sort_values("country", ascending=True)
+print(concat_data.head())
+concat_data = concat_data.sort_values("date", ascending=False)
+print(concat_data.head())
 
 
 
