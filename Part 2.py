@@ -11,7 +11,6 @@ print(android_games.shape)
 print(android_games.columns)
 print(android_games.head(5))
 
-
 list_total_ratings=['total ratings']
 list_5star_ratings=['5 star ratings']
 list_4star_ratings=['4 star ratings']
@@ -84,22 +83,22 @@ list_bottom_50_60day_np=np.array(bottom_50[list_bottom_50_60day])
 
 Avg_top50_3060= list_top_50_30day_np + list_top_50_60day_np / 2
 Avg_bottom50_3060= list_bottom_50_30day_np + list_bottom_50_60day_np / 2
-
 np.mean(Avg_top50_3060)
 print(np.mean(Avg_top50_3060))
-np.mean(list_top_50_np)
-print(np.mean(list_top_50_np))
-
 np.mean(Avg_bottom50_3060)
 print(np.mean(Avg_bottom50_3060))
-np.mean(list_bottom_50_np)
-print(np.mean(list_bottom_50_np))
-
-print(min(Avg_bottom50_3060))
-print(max(Avg_bottom50_3060))
 
 print(min(Avg_top50_3060))
 print(max(Avg_top50_3060))
+print(min(Avg_bottom50_3060))
+print(max(Avg_bottom50_3060))
+
+np.mean(list_top_50_np)
+print(np.mean(list_top_50_np))
+np.mean(list_bottom_50_np)
+print(np.mean(list_bottom_50_np))
+
+
 
 
 
