@@ -49,6 +49,7 @@ np.mean(percentage_5_star)
 print(np.mean(percentage_5_star))
 
 import matplotlib.pyplot as plt
+fig,ax=plt.subplots()
 plt.show()
 
 labels = '5star', '4star', '3star', '2star', '1star'
@@ -67,24 +68,32 @@ print(game_adventure_10)
 game_arcade_10=android_games[201:300]
 print(game_arcade_10)
 
-
-fig,ax=plt.subplots()
 ax.scatter(android_games['category'], android_games['growth (30 days)'])
 ax.set_xlabel('Category')
 ax.set_ylabel('Growth (30 days)')
 ax.set_title('30 Day Growth')
 plt.show()
 
-fig,ax=plt.subplots()
 ax.scatter(android_games['category'], android_games['growth (60 days)'])
 ax.set_xlabel('Category')
 ax.set_ylabel('Growth (60 days)')
 ax.set_title('60 Day Growth')
 plt.show()
 
+list_30day=['growth (30 days)']
+list_60day=['growth (60 days)']
 
+list_30day_np=np.array(android_games[list_30day])
+list_60day_np=np.array(android_games[list_60day])
 
+List_3060= list_30day_np + list_60day_np / 2
+print(List_3060)
 
+np.mean(List_3060)
+print(np.mean(List_3060))
 
-
+ax.plot(android_games["average rating"], android_games["growth (30 days)"])
+plt.show()
+ax.plot(android_games["average rating"], android_games["growth (60 days)"])
+plt.show()
 
