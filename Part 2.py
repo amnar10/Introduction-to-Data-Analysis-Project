@@ -98,8 +98,17 @@ print(np.mean(list_top_50_np))
 np.mean(list_bottom_50_np)
 print(np.mean(list_bottom_50_np))
 
+fig,ax=plt.subplots()
+ax.scatter(top_50['rank'], top_50['growth (30 days)'])
+ax.set_xlabel('Rank')
+ax.set_ylabel('Growth (30 days)')
+plt.show()
 
-
+fig,ax=plt.subplots()
+ax.scatter(bottom_50['rank'], bottom_50['growth (60 days)'])
+ax.set_xlabel('Rank')
+ax.set_ylabel('Growth (60 days)')
+plt.show()
 
 
 
