@@ -102,17 +102,29 @@ fig,ax=plt.subplots()
 ax.scatter(top_50['rank'], top_50['growth (30 days)'])
 ax.set_xlabel('Rank')
 ax.set_ylabel('Growth (30 days)')
+ax.set_title('Top 50 Games 30 Day Growth')
+plt.show()
+
+fig,ax=plt.subplots()
+ax.scatter(bottom_50['rank'], bottom_50['growth (30 days)'])
+ax.set_xlabel('Rank')
+ax.set_ylabel('Growth (30 days)')
+ax.set_title('Bottom 50 Games 30 Day Growth')
+plt.show()
+
+fig,ax=plt.subplots()
+ax.scatter(top_50['rank'], top_50['growth (60 days)'])
+ax.set_xlabel('Rank')
+ax.set_ylabel('Growth (60 days)')
+ax.set_title('Top 50 Games 60 Day Growth')
 plt.show()
 
 fig,ax=plt.subplots()
 ax.scatter(bottom_50['rank'], bottom_50['growth (60 days)'])
 ax.set_xlabel('Rank')
 ax.set_ylabel('Growth (60 days)')
+ax.set_title('Bottom 50 Games 60 Day Growth')
 plt.show()
-
-
-
-
 
 
 
