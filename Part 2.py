@@ -58,80 +58,29 @@ fig1, ax1 = plt.subplots()
 ax1.pie(sizes,labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')
-
 plt.show()
 
-top_50=android_games[:50]
-print(top_50)
-bottom_50=android_games[:-50]
-print(bottom_50)
+game_action_10=android_games[:11]
+print(game_action_10)
+game_adventure_10=android_games[100:200]
+print(game_adventure_10)
+game_arcade_10=android_games[201:300]
+print(game_arcade_10)
 
-list_top_50=['total ratings']
-list_top_50_30day=['growth (30 days)']
-list_top_50_60day=['growth (60 days)']
-list_bottom_50=['total ratings']
-list_bottom_50_30day=['growth (30 days)']
-list_bottom_50_60day=['growth (60 days)']
-
-list_top_50_np=np.array(top_50[list_top_50])
-list_top_50_30day_np=np.array(top_50[list_top_50_30day])
-list_top_50_60day_np=np.array(top_50[list_top_50_60day])
-list_bottom_50_np=np.array(bottom_50[list_bottom_50])
-list_bottom_50_30day_np=np.array(bottom_50[list_bottom_50_30day])
-list_bottom_50_60day_np=np.array(bottom_50[list_bottom_50_60day])
-
-Avg_top50_3060= list_top_50_30day_np + list_top_50_60day_np / 2
-Avg_bottom50_3060= list_bottom_50_30day_np + list_bottom_50_60day_np / 2
-
-np.mean(Avg_top50_3060)
-print(np.mean(Avg_top50_3060))
-np.mean(Avg_bottom50_3060)
-print(np.mean(Avg_bottom50_3060))
-
-print(min(Avg_top50_3060))
-print(max(Avg_top50_3060))
-print(min(Avg_bottom50_3060))
-print(max(Avg_bottom50_3060))
-
-np.mean(list_top_50_np)
-print(np.mean(list_top_50_np))
-np.mean(list_bottom_50_np)
-print(np.mean(list_bottom_50_np))
 
 fig,ax=plt.subplots()
-ax.scatter(top_50['rank'], top_50['growth (30 days)'])
-ax.set_xlabel('Rank')
+ax.scatter(android_games['category'], android_games['growth (30 days)'])
+ax.set_xlabel('Category')
 ax.set_ylabel('Growth (30 days)')
-ax.set_title('Top 50 Games 30 Day Growth')
+ax.set_title('30 Day Growth')
 plt.show()
 
 fig,ax=plt.subplots()
-ax.scatter(bottom_50['rank'], bottom_50['growth (30 days)'])
-ax.set_xlabel('Rank')
-ax.set_ylabel('Growth (30 days)')
-ax.set_title('Bottom 50 Games 30 Day Growth')
-plt.show()
-
-fig,ax=plt.subplots()
-ax.scatter(top_50['rank'], top_50['growth (60 days)'])
-ax.set_xlabel('Rank')
+ax.scatter(android_games['category'], android_games['growth (60 days)'])
+ax.set_xlabel('Category')
 ax.set_ylabel('Growth (60 days)')
-ax.set_title('Top 50 Games 60 Day Growth')
+ax.set_title('60 Day Growth')
 plt.show()
-
-fig,ax=plt.subplots()
-ax.scatter(bottom_50['rank'], bottom_50['growth (60 days)'])
-ax.set_xlabel('Rank')
-ax.set_ylabel('Growth (60 days)')
-ax.set_title('Bottom 50 Games 60 Day Growth')
-plt.show()
-
-
-
-
-
-
-
 
 
 
